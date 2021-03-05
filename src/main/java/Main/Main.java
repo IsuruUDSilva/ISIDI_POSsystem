@@ -13,7 +13,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        Label lable = new Label("Hello World");
+        Label lable = new Label("AAthuraya");
         Scene scene = new Scene(lable);
         primaryStage.setScene(scene);
         primaryStage.show();
