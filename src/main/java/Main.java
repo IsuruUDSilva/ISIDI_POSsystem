@@ -11,7 +11,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        Label lable = new Label("Hello World");
+        Label lable = new Label("hello world");
         Scene scene = new Scene(lable);
         primaryStage.setScene(scene);
         primaryStage.show();
