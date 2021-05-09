@@ -1,11 +1,7 @@
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-
-import java.io.IOException;
 
 public class Main extends Application {
 
@@ -15,14 +11,6 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        Parent root = null;
-        try {
-            root= FXMLLoader.load(getClass().getResource("login.fxml"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
         Label label = new Label("hello world");
         Scene scene = new Scene(label);
         primaryStage.setScene(scene);
