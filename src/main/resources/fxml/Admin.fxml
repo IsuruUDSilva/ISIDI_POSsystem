@@ -4,22 +4,22 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" >
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
    <children>
     <Button layoutX="29.0" layoutY="98.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="216.0" text="Product" />
-    <Button layoutX="29.0" layoutY="167.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="216.0" text="Sales" />
+    <Button layoutX="29.0" layoutY="131.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="216.0" text="Sales" />
       <MenuButton layoutX="504.0" layoutY="24.0" mnemonicParsing="false" text="Account">
         <items>
           <MenuItem mnemonicParsing="false" text="Action 1" />
           <MenuItem mnemonicParsing="false" text="Action 2" />
         </items>
       </MenuButton>
-    <Button layoutX="29.0" layoutY="133.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="216.0" text="Product Category" />
-    <Button layoutX="29.0" layoutY="200.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="216.0" text="Users" />
+    <Button layoutX="29.0" layoutY="166.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="216.0" text="Users" />
       <Label layoutX="59.0" layoutY="16.0" prefHeight="40.0" prefWidth="226.0" text="ADMIN">
          <font>
             <Font size="27.0" />
          </font></Label>
       <ListView layoutX="325.0" layoutY="98.0" prefHeight="248.0" prefWidth="200.0" />
+      <Button layoutX="29.0" layoutY="200.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="216.0" text="Order" />
    </children>
 </AnchorPane>
