@@ -2,6 +2,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import services.EmployeeService;
 
 public class Main extends Application {
 
@@ -15,5 +16,8 @@ public class Main extends Application {
         Scene scene = new Scene(label);
         primaryStage.setScene(scene);
         primaryStage.show();
+        EmployeeService employeeService = new EmployeeService();
+        employeeService.getAllEmployees();
+        System.out.println(employeeService.getEmployeeByUserName("admin").getM01FirstName());
     }
 }
