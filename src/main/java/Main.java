@@ -18,5 +18,6 @@ public class Main extends Application {
         primaryStage.show();
         EmployeeService employeeService = new EmployeeService();
         employeeService.getAllEmployees();
+        System.out.println(employeeService.getEmployeeByUserName("admin").getM01FirstName());
     }
 }
