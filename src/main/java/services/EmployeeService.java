@@ -56,12 +56,29 @@ public class EmployeeService implements EmployeeServiceI {
             Query query = session.createQuery(sql);
             query.setParameter("userName", userName);
             List<Employee> employee = query.getResultList();
+            session.close();
             if (employee.size() < 1) {
                 return null;
             }
             return employee.get(0);
         } catch (Exception ex) {
             return null;
+        } finally {
+
+            exit();
+        }
+    }
+
+    @Override
+    public boolean addEmployee(Employee employee) {
+        try {
+            setup();
+            Session session = sessionFactory.openSession();
+            session.save(employee);
+            session.close();
+            return true;
+        } catch (Exception ex) {
+            return false;
         } finally {
             exit();
         }

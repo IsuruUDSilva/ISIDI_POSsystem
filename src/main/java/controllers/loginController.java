@@ -20,7 +20,7 @@ public class loginController {
     @FXML
     private PasswordField pWordpwField;
 
-    private void login(){
+    public void login(){
         //TODO
         /*
         check user availability by using EmployeeService ->  getEmployeeByUserName(String userName)
