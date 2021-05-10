@@ -21,13 +21,17 @@ public class loginController {
     private PasswordField pWordpwField;
 
     private void login(){
-        if (uNametxtField.getText().equals("") && pWordpwField.getText().equals("")){
+        //TODO
+        /*
+        check user availability by using EmployeeService ->  getEmployeeByUserName(String userName)
+        then check if the employee is active after that check the password is correct
+        *** PUT EVERY MESSAGES,TITTLES ETC. TO THE Const.java ***
+        */
+        if (uNametxtField.getText().equals("") && pWordpwField.getText().equals("")) {
             System.out.println("Username and Password fields are empty");
-        }
-        else if (uNametxtField.getText().equals("user") && pWordpwField.getText().equals("password")){
+        } else if (uNametxtField.getText().equals("user") && pWordpwField.getText().equals("password")) {
             popup();
-        }
-        else {
+        } else {
             System.out.println("User name or Password is wrong");
         }
     }

@@ -2,9 +2,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import services.EmployeeService;
 
 import java.io.IOException;
 
@@ -16,9 +14,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-
         Parent root = null;
-
         try {
             root = FXMLLoader.load(getClass().getResource("fxml/login.fxml"));
             Scene scene = new Scene(root);
@@ -29,14 +25,5 @@ public class Main extends Application {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
-
-//        Label label = new Label("hello world");
-//        Scene scene = new Scene(label);
-//        primaryStage.setScene(scene);
-//        primaryStage.show();
-//        EmployeeService employeeService = new EmployeeService();
-//        employeeService.getAllEmployees();
-//        System.out.println(employeeService.getEmployeeByUserName("admin").getM01FirstName());
     }
 }
