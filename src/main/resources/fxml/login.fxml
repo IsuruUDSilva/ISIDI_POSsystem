@@ -8,11 +8,11 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.loginController">
    <children>
-      <Button id="loginB" fx:id="loginB" defaultButton="true" layoutX="148.0" layoutY="254.0" mnemonicParsing="false" onAction="#login"  prefHeight="90.0" prefWidth="165.0" text="Login">
+      <Button id="loginB" fx:id="loginBtn" defaultButton="true" layoutX="148.0" layoutY="254.0" mnemonicParsing="false" onAction="#login" prefHeight="90.0" prefWidth="165.0" text="Login">
          <font>
             <Font size="20.0" />
          </font></Button>
-      <Button id="cancelB" fx:id="cancelB" cancelButton="true" layoutX="347.0" layoutY="254.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="165.0" text="Cancel" textAlignment="CENTER" wrapText="true">
+      <Button id="cancelB" fx:id="cancelBtn" cancelButton="true" layoutX="347.0" layoutY="254.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="165.0" text="Cancel" textAlignment="CENTER" wrapText="true">
          <effect>
             <Blend />
          </effect>
@@ -33,8 +33,8 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <PasswordField id="pWord" fx:id="pWordpwField" layoutX="188.0" layoutY="185.0" prefHeight="44.0" prefWidth="318.0" />
-      <TextField id="uName" fx:id="uNametxtField" layoutX="188.0" layoutY="107.0" prefHeight="44.0" prefWidth="318.0" />
+      <PasswordField id="pWord" fx:id="passWordPassWordField" layoutX="188.0" layoutY="185.0" prefHeight="44.0" prefWidth="318.0" />
+      <TextField id="uName" fx:id="userNameTextField" layoutX="188.0" layoutY="107.0" prefHeight="44.0" prefWidth="318.0" />
       <Label layoutX="180.0" layoutY="21.0" prefHeight="43.0" prefWidth="240.0" text="ISIDI POS System">
          <font>
             <Font name="System Bold Italic" size="29.0" />
