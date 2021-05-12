@@ -35,8 +35,8 @@ public class loginController {
 
         if (userNameTextField.getText().equals("") && passWordPassWordField.getText().equals("")) {
             System.out.println("Username and Password fields are empty");
-        } else if (employeeService.getEmployeeByUserName(userName) != null) {
-            if (passWordPassWordField.getText().equals("password")) {
+        } else if (employeeService.getActiveEmployeeByUserName(userName) != null) {
+            if (passWordPassWordField.getText().equals(employeeService.getActiveEmployeeByUserName(userName).getM01Password())) {
                 popupOK();
             } else {
                 popupWrong();
