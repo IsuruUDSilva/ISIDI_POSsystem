@@ -12,7 +12,7 @@
          <font>
             <Font size="20.0" />
          </font></Button>
-      <Button id="cancelB" fx:id="cancelBtn" cancelButton="true" layoutX="347.0" layoutY="254.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="165.0" text="Cancel" textAlignment="CENTER" wrapText="true">
+      <Button id="cancelB" fx:id="cancelBtn" cancelButton="true" layoutX="347.0" layoutY="254.0" mnemonicParsing="false" onAction="#cancel" prefHeight="90.0" prefWidth="165.0" text="Cancel" textAlignment="CENTER" wrapText="true">
          <effect>
             <Blend />
          </effect>
