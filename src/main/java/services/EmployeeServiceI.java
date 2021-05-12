@@ -9,5 +9,7 @@ public interface EmployeeServiceI {
     public void exit() ;
     public List<Employee> getAllEmployees();
     public Employee getEmployeeByUserName(String userName);
+    public Employee getActiveEmployeeByUserName(String userName);
     public boolean addEmployee(Employee employee);
+
 }

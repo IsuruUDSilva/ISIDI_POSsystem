@@ -70,6 +70,28 @@ public class EmployeeService implements EmployeeServiceI {
     }
 
     @Override
+    public Employee getActiveEmployeeByUserName(String userName) {
+        try {
+            setup();
+            Session session = sessionFactory.openSession();
+            String sql = Const.ACTIVE_EMPLOYEE_SELECT + Const.AND + "m01UserName = :userName";
+            Query query = session.createQuery(sql);
+            query.setParameter("userName", userName);
+            List<Employee> employee = query.getResultList();
+            session.close();
+            if (employee.size() < 1) {
+                return null;
+            }
+            return employee.get(0);
+        } catch (Exception ex) {
+            return null;
+        } finally {
+
+            exit();
+        }
+    }
+
+    @Override
     public boolean addEmployee(Employee employee) {
         try {
             setup();
