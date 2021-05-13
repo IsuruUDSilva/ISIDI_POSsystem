@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 13, 2021 at 06:28 PM
+-- Generation Time: May 13, 2021 at 07:28 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -40,6 +40,16 @@ CREATE TABLE `m01_employee` (
   `M01_PASSWORD` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `m01_employee`
+--
+
+INSERT INTO `m01_employee` (`M01_ID`, `M01_TYPE`, `M01_ACTIVE`, `M01_FIRST_NAME`, `M01_LAST_NAME`, `M01_ADDRESS`, `M01_PHONE`, `M01_NIC`, `M01_USER_NAME`, `M01_PASSWORD`) VALUES
+(1, 1, 0, 'Prabath', 'Walakanda', 'Kurundugaha', '0768694034', '67148354645V', 'Prabath', 'isidiAqua'),
+(2, 2, 1, 'Geshani', 'Sithara', 'Kurundugaha', '0776923093', '784659665V', 'Geshani', 'geshaniAqua'),
+(3, 3, 1, 'Chamudi', 'Dinara', 'Pathiraja', '0761261607', '848154886V', 'Chamudi', 'chamuAqua'),
+(4, 3, 1, 'Telani', 'Walakanda', 'Kurundugaha', '0768694034', '85264972V', 'Telani', 'telaniAqua');
+
 -- --------------------------------------------------------
 
 --
@@ -50,6 +60,15 @@ CREATE TABLE `m02_employee_type` (
   `M02_ID` int(11) NOT NULL,
   `M02_NAME` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `m02_employee_type`
+--
+
+INSERT INTO `m02_employee_type` (`M02_ID`, `M02_NAME`) VALUES
+(1, 'Admin'),
+(2, 'Manager'),
+(3, 'Cashier');
 
 -- --------------------------------------------------------
 
@@ -235,13 +254,13 @@ ALTER TABLE `m06_bill`
 -- AUTO_INCREMENT for table `m01_employee`
 --
 ALTER TABLE `m01_employee`
-  MODIFY `M01_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `M01_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `m02_employee_type`
 --
 ALTER TABLE `m02_employee_type`
-  MODIFY `M02_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `M02_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `m03_product`
