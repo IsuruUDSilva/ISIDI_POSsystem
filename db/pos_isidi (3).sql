@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 08, 2021 at 02:16 PM
+-- Generation Time: May 13, 2021 at 06:28 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -34,8 +34,8 @@ CREATE TABLE `m01_employee` (
   `M01_FIRST_NAME` varchar(200) NOT NULL,
   `M01_LAST_NAME` varchar(200) NOT NULL,
   `M01_ADDRESS` varchar(200) NOT NULL,
-  `M01_PHONE` int(10) NOT NULL,
-  `M01_NIC` int(11) NOT NULL,
+  `M01_PHONE` varchar(200) NOT NULL,
+  `M01_NIC` varchar(20) NOT NULL,
   `M01_USER_NAME` varchar(100) NOT NULL,
   `M01_PASSWORD` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -72,7 +72,8 @@ CREATE TABLE `m03_product` (
 
 INSERT INTO `m03_product` (`M03_ID`, `M03_NAME`, `M03_SIZE`, `M03_UNIT_PRICE`, `M03_QUANTITY`, `M03_CATEGORY_ID_M04`) VALUES
 (1, 'a1', 'M', 120, 2, 1),
-(2, 'a2', 'L', 20, 3, 1);
+(2, 'a2', 'L', 20, 3, 1),
+(3, 'b1', 'M', 300, 4, 2);
 
 -- --------------------------------------------------------
 
@@ -82,8 +83,25 @@ INSERT INTO `m03_product` (`M03_ID`, `M03_NAME`, `M03_SIZE`, `M03_UNIT_PRICE`, `
 
 CREATE TABLE `m04_product_category` (
   `M04_ID` int(11) NOT NULL,
-  `M04_NAME` varchar(200) NOT NULL
+  `M04_NAME` varchar(200) NOT NULL,
+  `M04_IS_MAIN_CATEGORY` tinyint(1) NOT NULL,
+  `M04_MAIN_CATEGORY_ID_M04` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `m04_product_category`
+--
+
+INSERT INTO `m04_product_category` (`M04_ID`, `M04_NAME`, `M04_IS_MAIN_CATEGORY`, `M04_MAIN_CATEGORY_ID_M04`) VALUES
+(1, 'Pet food ', 1, NULL),
+(2, 'cat food', 0, 1),
+(3, 'Dog food', 0, 1),
+(4, 'Rabbit Food', 0, 1),
+(5, 'Pigeon Food', 0, 1),
+(6, 'Tank Set', 1, NULL),
+(7, 'Tank', 0, 2),
+(8, 'Tank top(roof)', 0, 2),
+(9, 'Tank Stand', 0, 2);
 
 -- --------------------------------------------------------
 
@@ -229,13 +247,13 @@ ALTER TABLE `m02_employee_type`
 -- AUTO_INCREMENT for table `m03_product`
 --
 ALTER TABLE `m03_product`
-  MODIFY `M03_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `M03_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `m04_product_category`
 --
 ALTER TABLE `m04_product_category`
-  MODIFY `M04_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `M04_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `m05_order`
