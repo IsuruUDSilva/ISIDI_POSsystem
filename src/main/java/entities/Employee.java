@@ -11,7 +11,7 @@ public class Employee{
     @Column(name = "M01_ID")
     private Integer m01Id;
 
-    @Column(name = "M01_TYPE")
+    @Column(name = "M01_TYPE_ID_M02")
     private int m01Type;
 
     @Column(name = "M01_ACTIVE")

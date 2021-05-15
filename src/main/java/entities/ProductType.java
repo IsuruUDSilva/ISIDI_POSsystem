@@ -15,6 +15,12 @@ public class ProductType {
     @Column(name = "M04_NAME")
     private String m04Name;
 
+    @Column(name = "M04_IS_MAIN_CATEGORY")
+    private int m04IsMainCategory;
+
+    @Column(name = "M04_MAIN_CATEGORY_ID_M04")
+    private Integer m04MainCategoryIdM04;
+
     public Integer getM04ID() {
         return m04ID;
     }
@@ -29,6 +35,22 @@ public class ProductType {
 
     public void setM04Name(String m04Name) {
         this.m04Name = m04Name;
+    }
+
+    public int getM04IsMainCategory() {
+        return m04IsMainCategory;
+    }
+
+    public void setM04IsMainCategory(int m04IsMainCategory) {
+        this.m04IsMainCategory = m04IsMainCategory;
+    }
+
+    public Integer getM04MainCategoryIdM04() {
+        return m04MainCategoryIdM04;
+    }
+
+    public void setM04MainCategoryIdM04(Integer m04MainCategoryIdM04) {
+        this.m04MainCategoryIdM04 = m04MainCategoryIdM04;
     }
 }
 
