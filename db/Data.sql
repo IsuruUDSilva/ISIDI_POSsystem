@@ -1,0 +1,2 @@
+INSERT INTO `m01_employee` (`M01_ID`, `M01_TYPE_ID_M02`, `M01_ACTIVE`, `M01_FIRST_NAME`, `M01_LAST_NAME`, `M01_ADDRESS`, `M01_PHONE`, `M01_NIC`, `M01_USER_NAME`, `M01_PASSWORD`) VALUES (NULL, '1', '1', 'Admin', 'Admin', 'N/A', 'N/A', 'N/A', 'admin', 'admin');
+INSERT INTO `m01_employee` (`M01_ID`, `M01_TYPE_ID_M02`, `M01_ACTIVE`, `M01_FIRST_NAME`, `M01_LAST_NAME`, `M01_ADDRESS`, `M01_PHONE`, `M01_NIC`, `M01_USER_NAME`, `M01_PASSWORD`) VALUES (NULL, '2', '1', 'User', 'Active', 'N/A', 'N/A', 'N/A', 'User1', '123');
