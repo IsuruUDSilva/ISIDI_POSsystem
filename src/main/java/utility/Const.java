@@ -16,4 +16,10 @@ public final class Const {
 
     //Regarding BillM06 table------------------------
 //    public static final String BILL_SELECT_ALL_
+    public enum employeeType{
+        Admin,
+        Manager,
+        Cashier
+
+    }
 }
