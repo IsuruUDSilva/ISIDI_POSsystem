@@ -40,6 +40,7 @@ public class BaseEntityService implements BaseEntityServiceI {
         sessionFactory.close();
     }
 
+    @Override
     public List executeQuery(String sqlQuery, Map<String, String> queryParams) {
         try {
             setUp();
@@ -56,6 +57,7 @@ public class BaseEntityService implements BaseEntityServiceI {
         }
     }
 
+    @Override
     public Query createQuery(Session session, String sqlQuery, Map<String, String> queryParams) {
         try {
             Query query = session.createQuery(sqlQuery);
@@ -65,6 +67,24 @@ public class BaseEntityService implements BaseEntityServiceI {
             return query;
         } catch (Exception ex) {
             return null;
+        }
+    }
+
+    @Override
+    public boolean add(Object entity) {
+        try {
+            setUp();
+            Session session = sessionFactory.openSession();
+            session.beginTransaction();
+            session.save(entity);
+            session.getTransaction().commit();
+            session.close();
+            return true;
+        } catch (Exception ex) {
+            System.out.println(ex);
+            return false;
+        } finally {
+            exit();
         }
     }
 }

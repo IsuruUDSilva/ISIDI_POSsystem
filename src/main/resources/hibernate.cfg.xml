@@ -16,6 +16,7 @@
         <mapping class="entities.db.DBTableColumn"></mapping>
         <!--Entities-->
         <mapping class="entities.Employee"/>
+        <mapping class="entities.ProductType"/>
 
     </session-factory>
 </hibernate-configuration>
