@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.AddUpdateProduct">
    <children>
       <Label layoutX="21.0" layoutY="22.0" prefHeight="35.0" prefWidth="225.0" text="Add/Update Product" textFill="#822626">
@@ -17,9 +16,9 @@
       <Label layoutX="21.0" layoutY="74.0" prefHeight="18.0" prefWidth="82.0" text="Produt Name" />
       <TextField layoutX="20.0" layoutY="92.0" prefHeight="26.0" prefWidth="143.0" />
       <Label layoutX="21.0" layoutY="126.0" prefHeight="18.0" prefWidth="36.0" text="Size" />
+      <Label layoutX="21.0" layoutY="181.0" prefHeight="18.0" prefWidth="82.0" text="Unit Price" />
       <TextField layoutX="20.0" layoutY="144.0" prefHeight="26.0" prefWidth="143.0" />
       <TextField layoutX="20.0" layoutY="200.0" prefHeight="26.0" prefWidth="143.0" />
-      <Label layoutX="21.0" layoutY="181.0" prefHeight="18.0" prefWidth="82.0" text="Unit Price" />
       <Label layoutX="21.0" layoutY="238.0" prefHeight="18.0" prefWidth="122.0" text="Select Main Category" />
       <ChoiceBox layoutX="17.0" layoutY="256.0" prefWidth="150.0" />
       <Label layoutX="21.0" layoutY="291.0" prefHeight="18.0" prefWidth="108.0" text="Select Sub Category" />
@@ -36,5 +35,6 @@
       <Button layoutX="431.0" layoutY="335.0" mnemonicParsing="false" text="Apply" />
       <Button layoutX="427.0" layoutY="27.0" mnemonicParsing="false" text="Add" />
       <Button layoutX="490.0" layoutY="27.0" mnemonicParsing="false" text="Update" />
+      <Button layoutX="356.0" layoutY="335.0" mnemonicParsing="false" text="Previous" />
    </children>
 </AnchorPane>

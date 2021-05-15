@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.AddUpdateProductCategory">
+   <children>
+      <ChoiceBox layoutX="305.0" layoutY="413.0" prefHeight="30.0" prefWidth="178.0" />
+      <Button layoutX="253.0" layoutY="549.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="150.0" text="Update" />
+      <Label layoutX="42.0" layoutY="49.0" prefHeight="35.0" prefWidth="378.0" text="Add/Update Product Category" textFill="#923333">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Button layoutX="266.0" layoutY="256.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="123.0" text="Update" />
+      <Button layoutX="81.0" layoutY="256.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="138.0" text="Add" />
+      <Label layoutX="78.0" layoutY="110.0" prefHeight="38.0" prefWidth="229.0" text="Main Category">
+         <font>
+            <Font size="19.0" />
+         </font></Label>
+      <TextField layoutX="78.0" layoutY="204.0" prefHeight="35.0" prefWidth="316.0" />
+      <Label layoutX="88.0" layoutY="345.0" prefHeight="42.0" prefWidth="295.0" text="Sub Category" textFill="#161515">
+         <font>
+            <Font size="19.0" />
+         </font></Label>
+      <Button layoutX="458.0" layoutY="548.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="138.0" text="Delete" />
+      <TextField layoutX="81.0" layoutY="463.0" prefHeight="42.0" prefWidth="343.0" />
+      <ChoiceBox layoutX="83.0" layoutY="413.0" prefHeight="30.0" prefWidth="178.0" />
+      <Label layoutX="93.0" layoutY="413.0" prefHeight="30.0" prefWidth="158.0" text="Select Main Category">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Button layoutX="81.0" layoutY="549.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="138.0" text="Add" />
+      <Button layoutX="449.0" layoutY="249.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="123.0" text="Delete" />
+      <Button layoutX="697.0" layoutY="630.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="101.0" text="Previous" />
+      <Button layoutX="810.0" layoutY="630.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="101.0" text="Apply" />
+      <Button layoutX="933.0" layoutY="630.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="101.0" text="Exit" />
+      <ChoiceBox layoutX="81.0" layoutY="160.0" prefHeight="29.0" prefWidth="204.0" />
+      <Label layoutX="88.0" layoutY="166.0" prefHeight="18.0" prefWidth="111.0" text="Category">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="310.0" layoutY="413.0" prefHeight="30.0" prefWidth="158.0" text="Select Sub Category">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
