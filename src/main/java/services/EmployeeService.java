@@ -7,103 +7,114 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.query.Query;
+import services.utils.BaseEntityService;
 import utility.Const;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public class EmployeeService implements EmployeeServiceI {
-    protected SessionFactory sessionFactory;
-
-    @Override
-    public void setup() {
-        final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
-                .configure() // configures settings from hibernate.cfg.xml
-                .build();
-        try {
-            sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
-        } catch (Exception ex) {
-            StandardServiceRegistryBuilder.destroy(registry);
-        }
-    }
-
-    @Override
-    public void exit() {
-        sessionFactory.close();
-    }
-
-    @Override
-    public List<Employee> getAllEmployees() {
-        try {
-            setup();
-            Session session = sessionFactory.openSession();
-            List<Employee> employees = session.createQuery(Const.EMPLOYEE_SELECT_ALL_QUERY, Employee.class).getResultList();
-            session.close();
-            return employees;
-        } catch (Exception ex) {
-            return null;
-        } finally {
-            exit();
-        }
-
-    }
-
-    @Override
-    public Employee getEmployeeByUserName(String userName) {
-        try {
-            setup();
-            Session session = sessionFactory.openSession();
-            String sql = Const.EMPLOYEE_SELECT_ALL_QUERY_WITH_WHERE + "m01UserName = :userName";
-            Query query = session.createQuery(sql);
-            query.setParameter("userName", userName);
-            List<Employee> employee = query.getResultList();
-            session.close();
-            if (employee.size() < 1) {
-                return null;
-            }
-            return employee.get(0);
-        } catch (Exception ex) {
-            return null;
-        } finally {
-
-            exit();
-        }
-    }
+public class EmployeeService extends BaseEntityService implements EmployeeServiceI {
+//    protected SessionFactory sessionFactory;
+//
+//    @Override
+//    public void setup() {
+//        final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
+//                .configure() // configures settings from hibernate.cfg.xml
+//                .build();
+//        try {
+//            sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
+//        } catch (Exception ex) {
+//            StandardServiceRegistryBuilder.destroy(registry);
+//        }
+//    }
+//
+//    @Override
+//    public void exit() {
+//        sessionFactory.close();
+//    }
+//
+//    @Override
+//    public List<Employee> getAllEmployees() {
+//        try {
+//            setup();
+//            Session session = sessionFactory.openSession();
+//            List<Employee> employees = session.createQuery(Const.EMPLOYEE_SELECT_ALL_QUERY, Employee.class).getResultList();
+//            session.close();
+//            return employees;
+//        } catch (Exception ex) {
+//            return null;
+//        } finally {
+//            exit();
+//        }
+//
+//    }
+//
+//    @Override
+//    public Employee getEmployeeByUserName(String userName) {
+//        try {
+//            setup();
+//            Session session = sessionFactory.openSession();
+//            String sql = Const.EMPLOYEE_SELECT_ALL_QUERY_WITH_WHERE + "m01UserName = :userName";
+//            Query query = session.createQuery(sql);
+//            query.setParameter("userName", userName);
+//            List<Employee> employee = query.getResultList();
+//            session.close();
+//            if (employee.size() < 1) {
+//                return null;
+//            }
+//            return employee.get(0);
+//        } catch (Exception ex) {
+//            return null;
+//        } finally {
+//
+//            exit();
+//        }
+//    }
 
     @Override
     public Employee getActiveEmployeeByUserName(String userName) {
-        try {
-            setup();
-            Session session = sessionFactory.openSession();
-            String sql = Const.ACTIVE_EMPLOYEE_SELECT + Const.AND + "m01UserName = :userName";
-            Query query = session.createQuery(sql);
-            query.setParameter("userName", userName);
-            List<Employee> employee = query.getResultList();
-            session.close();
-            if (employee.size() < 1) {
-                return null;
-            }
-            return employee.get(0);
-        } catch (Exception ex) {
+//        try {
+//            setup();
+//            Session session = sessionFactory.openSession();
+//            String sql = Const.ACTIVE_EMPLOYEE_SELECT + Const.AND + "m01UserName = :userName";
+//            Query query = session.createQuery(sql);
+//            query.setParameter("userName", userName);
+//            List<Employee> employee = query.getResultList();
+//            session.close();
+//            if (employee.size() < 1) {
+//                return null;
+//            }
+//            return employee.get(0);
+//        } catch (Exception ex) {
+//            return null;
+//        } finally {
+//
+//            exit();
+//        }
+        String sql = Const.ACTIVE_EMPLOYEE_SELECT + Const.AND + "m01UserName = :userName";
+        Map<String, String> queryParams = new HashMap<String, String>();
+        queryParams.put("userName", userName);
+        List<Employee> employees = executeQuery(sql, queryParams);
+        if (employees.size() < 1) {
             return null;
-        } finally {
-
-            exit();
         }
+        return employees.get(0);
     }
 
-    @Override
-    public boolean addEmployee(Employee employee) {
-        try {
-            setup();
-            Session session = sessionFactory.openSession();
-            session.save(employee);
-            session.close();
-            return true;
-        } catch (Exception ex) {
-            return false;
-        } finally {
-            exit();
-        }
-    }
+//    @Override
+//    public boolean addEmployee(Employee employee) {
+//        try {
+//            setup();
+//            Session session = sessionFactory.openSession();
+//            session.save(employee);
+//            session.close();
+//            return true;
+//        } catch (Exception ex) {
+//            return false;
+//        } finally {
+//            exit();
+//        }
+//    }
 
 }

@@ -45,9 +45,9 @@ CREATE TABLE `m01_employee` (
 --
 
 INSERT INTO `m01_employee` (`M01_ID`, `M01_TYPE`, `M01_ACTIVE`, `M01_FIRST_NAME`, `M01_LAST_NAME`, `M01_ADDRESS`, `M01_PHONE`, `M01_NIC`, `M01_USER_NAME`, `M01_PASSWORD`) VALUES
-(1, 1, 0, 'Prabath', 'Walakanda', 'Kurundugaha', '0768694034', '67148354645V', 'Prabath', 'isidiAqua'),
+(1, 1, 1, 'Prabath', 'Walakanda', 'Kurundugaha', '0768694034', '67148354645V', 'Prabath', 'isidiAqua'),
 (2, 2, 1, 'Geshani', 'Sithara', 'Kurundugaha', '0776923093', '784659665V', 'Geshani', 'geshaniAqua'),
-(3, 3, 1, 'Chamudi', 'Dinara', 'Pathiraja', '0761261607', '848154886V', 'Chamudi', 'chamuAqua'),
+(3, 3, 0, 'Chamudi', 'Dinara', 'Pathiraja', '0761261607', '848154886V', 'Chamudi', 'chamuAqua'),
 (4, 3, 1, 'Telani', 'Walakanda', 'Kurundugaha', '0768694034', '85264972V', 'Telani', 'telaniAqua');
 
 -- --------------------------------------------------------

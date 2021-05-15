@@ -12,7 +12,6 @@ public final class Const {
     public static final String EMPLOYEE_SELECT_ALL_QUERY = "FROM Employee " + EMPLOYEE_TABLE_IDENTIFIER;
     public static final String EMPLOYEE_SELECT_ALL_QUERY_WITH_WHERE = EMPLOYEE_SELECT_ALL_QUERY + WHERE + EMPLOYEE_TABLE_IDENTIFIER + ".";
     public static final String ACTIVE_EMPLOYEE_SELECT = EMPLOYEE_SELECT_ALL_QUERY_WITH_WHERE + "m01Active = 1";
-    // from Employee m01 where m01.
 
 
     //Regarding BillM06 table------------------------
