@@ -13,7 +13,7 @@ import services.EmployeeServiceI;
 import java.util.List;
 
 
-public class loginController {
+public class LoginController {
 
     @FXML
     private Button loginBtn;
