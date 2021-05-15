@@ -11,7 +11,7 @@ import services.EmployeeService;
 import services.EmployeeServiceI;
 
 
-public class loginController {
+public class LoginController {
 
     private final EmployeeServiceI employeeServiceI = new EmployeeService();
     @FXML
