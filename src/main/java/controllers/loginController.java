@@ -10,24 +10,18 @@ import javafx.scene.control.TextField;
 import services.EmployeeService;
 import services.EmployeeServiceI;
 
-import java.util.List;
-
 
 public class loginController {
 
+    private final EmployeeServiceI employeeServiceI = new EmployeeService();
     @FXML
     private Button loginBtn;
-
     @FXML
     private Button cancelBtn;
-
     @FXML
     private TextField userNameTextField;
-
     @FXML
     private PasswordField passWordPassWordField;
-
-    private EmployeeServiceI employeeServiceI = new EmployeeService();
 
     public void login() {
         //TODO
@@ -41,10 +35,9 @@ public class loginController {
         String userName = userNameTextField.getText();
         String passWord = passWordPassWordField.getText();
 
-        if (validateUser(userName,passWord)){
+        if (validateUser(userName, passWord)) {
             popupOK();
-        }
-        else{
+        } else {
             popupWrong();
         }
 
@@ -66,36 +59,31 @@ public class loginController {
         alert.showAndWait();
     }
 
-    private boolean validateUser(String userName, String passWord){
+    private boolean validateUser(String userName, String passWord) {
 
         try {
-            if(userName.isEmpty()||passWord.isEmpty()||userName.isBlank()|| passWord.isBlank()){
+            if (userName.isEmpty() || passWord.isEmpty() || userName.isBlank() || passWord.isBlank()) {
                 return false;
+            } else {
+                Employee employee = employeeServiceI.getActiveEmployeeByUserName(userName);
+                if (employee.equals(null)) {
+                    return false;
+                } else {
+                    return employee.getM01Password().equals(passWord);
+                }
             }
-            else if(employeeServiceI.getActiveEmployeeByUserName(userName).equals(null)){
-                return false;
-            }
-            else if (employeeServiceI.getActiveEmployeeByUserName(userName).getM01UserName().equals(userName) && employeeServiceI.getActiveEmployeeByUserName(userName).getM01Password().equals(passWord)){
-                return true;
-            }
-            else{
-                return false;
-            }
-        }
-        catch(NullPointerException ex) {
+        } catch (NullPointerException ex) {
             return false;
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             return false;
         }
 
     }
 
-    public void cancel(){
+    public void cancel() {
         Platform.exit();
         System.exit(0);
     }
-
 
 
 }
