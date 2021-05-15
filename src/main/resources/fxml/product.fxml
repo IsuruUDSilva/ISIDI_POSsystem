@@ -2,22 +2,31 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.Product">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.Product">
    <children>
-      <Label layoutX="23.0" layoutY="22.0" prefHeight="32.0" prefWidth="245.0" text="Product" />
-      <TableView layoutX="19.0" layoutY="66.0" prefHeight="314.0" prefWidth="561.0">
+      <Label layoutX="40.0" layoutY="14.0" prefHeight="43.0" prefWidth="139.0" text="Product" textFill="#a41d6e">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font></Label>
+      <Button layoutX="403.0" layoutY="71.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="50.0" text="Add" />
+      <Button layoutX="528.0" layoutY="68.0" mnemonicParsing="false" text="Delete" />
+      <Button layoutX="463.0" layoutY="71.0" mnemonicParsing="false" text="Update" />
+      <ChoiceBox layoutX="197.0" layoutY="71.0" prefHeight="25.0" prefWidth="139.0" />
+      <ChoiceBox layoutX="40.0" layoutY="71.0" prefHeight="25.0" prefWidth="139.0" />
+      <TableView layoutX="40.0" layoutY="112.0" prefHeight="237.0" prefWidth="529.0">
         <columns>
           <TableColumn prefWidth="95.0" text="Code" />
-          <TableColumn prefWidth="224.0" text="Name" />
-            <TableColumn prefWidth="122.0" text="Unit_Price" />
-            <TableColumn prefWidth="119.0" text="Qty" />
+          <TableColumn prefWidth="138.0" text="Name" />
+            <TableColumn prefWidth="125.0" text="Unit_Price" />
+            <TableColumn prefWidth="202.0" text="Qty" />
         </columns>
       </TableView>
-      <Button layoutX="400.0" layoutY="25.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="50.0" text="Add" />
-      <Button layoutX="529.0" layoutY="26.0" mnemonicParsing="false" text="Delete" />
-      <Button layoutX="461.0" layoutY="26.0" mnemonicParsing="false" text="Update" />
-      <ChoiceBox layoutX="240.0" layoutY="26.0" prefWidth="150.0" />
-      <ChoiceBox layoutX="80.0" layoutY="27.0" prefWidth="150.0" />
+      <Label layoutX="54.0" layoutY="72.0" prefHeight="18.0" prefWidth="71.0" text="Category" />
+      <Label layoutX="206.0" layoutY="72.0" prefHeight="18.0" prefWidth="81.0" text="Sub category" />
+      <TextField layoutX="397.0" layoutY="23.0" prefHeight="26.0" prefWidth="178.0" />
+      <Label layoutX="358.0" layoutY="22.0" prefHeight="26.0" prefWidth="37.0" text="Search" />
+      <Button layoutX="535.0" layoutY="360.0" mnemonicParsing="false" text="Exit" />
    </children>
 </AnchorPane>
