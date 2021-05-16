@@ -1,4 +1,5 @@
 package controllers;
 
-public class UsersController {
+public class UsersController extends BaseController{
+
 }

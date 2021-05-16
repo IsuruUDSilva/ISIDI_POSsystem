@@ -8,10 +8,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
 import services.EmployeeService;
 import services.EmployeeServiceI;
-
 import java.io.IOException;
 
 
@@ -38,14 +36,6 @@ public class LoginController extends BaseController {
     private PasswordField passWordPassWordField;
 
     public void login() {
-        //TODO
-        /*
-        check user availability by using EmployeeService ->  getEmployeeByUserName(String userName)
-        then check if the employee is active after that check the password is correct
-        *** PUT EVERY MESSAGES,TITTLES ETC. TO THE Const.java ***
-        */
-//        EmployeeService employeeService = new EmployeeService();
-
         String userName = userNameTextField.getText();
         String passWord = passWordPassWordField.getText();
 
@@ -84,7 +74,7 @@ public class LoginController extends BaseController {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
             Pane root = fxmlLoader.load(getClass().getResource("/fxml/home.fxml").openStream());
-            HomeController homeController = fxmlLoader.getController();
+//            HomeController homeController = fxmlLoader.getController();
             showNextStage(root, false);
         } catch (IOException e) {
             e.printStackTrace();
