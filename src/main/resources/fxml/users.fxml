@@ -1,33 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.Users">
+<AnchorPane fx:id="userAnchorPane" maxHeight="768.0" maxWidth="1366.0" minHeight="768.0" minWidth="1366.0" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UsersController">
    <children>
-      <TableView layoutX="33.0" layoutY="91.0" prefHeight="251.0" prefWidth="534.0">
-        <columns>
-          <TableColumn prefWidth="58.799983978271484" text="UserID" />
-            <TableColumn prefWidth="54.0" text="Type" />
-            <TableColumn prefWidth="81.20001220703125" text="First_Name" />
-            <TableColumn prefWidth="75.0" text="Last_Name" />
-            <TableColumn prefWidth="94.20001220703125" text="Address" />
-            <TableColumn prefWidth="74.5999755859375" text="Phone_No" />
-            <TableColumn prefWidth="96.80001220703127" text="NIC" />
-        </columns>
-      </TableView>
-      <Label layoutX="35.0" layoutY="27.0" prefHeight="43.0" prefWidth="174.0" text="Users" textFill="#247384">
-         <font>
-            <Font name="System Bold" size="28.0" />
-         </font>
-      </Label>
-      <Button layoutX="381.0" layoutY="35.0" mnemonicParsing="false" text="Add" />
-      <Button layoutX="435.0" layoutY="36.0" mnemonicParsing="false" text="Update" />
-      <Button layoutX="499.0" layoutY="36.0" mnemonicParsing="false" text="Delete" />
-      <Button layoutX="528.0" layoutY="352.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="38.0" text="Exit" />
-      <Accordion layoutX="158.0" layoutY="37.0" />
-      <TextField layoutX="200.0" layoutY="36.0" prefHeight="26.0" prefWidth="159.0" />
-      <Label layoutX="158.0" layoutY="35.0" prefHeight="26.0" prefWidth="50.0" text="Search" />
+      <BorderPane maxHeight="768.0" maxWidth="1366.0" minHeight="768.0" minWidth="1366.0" prefHeight="768.0" prefWidth="1366.0">
+         <center>
+            <TableView fx:id="userTable" prefHeight="500" prefWidth="800" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </TableView>
+         </center>
+         <top>
+            <HBox fillHeight="false" prefHeight="60.0" prefWidth="1143.0" spacing="20.0" BorderPane.alignment="CENTER_RIGHT">
+               <children>
+                  <Label prefHeight="43.0" prefWidth="174.0" text="Users" textFill="#247384">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="500.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label prefHeight="26.0" prefWidth="50.0" text="Search" />
+                  <TextField prefHeight="26.0" prefWidth="159.0" />
+                  <Button fx:id="addBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Add" />
+                  <Button fx:id="updateBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Update" />
+                  <Button fx:id="deleteBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Delete" />
+                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="94.0" text="Exit" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+      </BorderPane>
    </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
 </AnchorPane>

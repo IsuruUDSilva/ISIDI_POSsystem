@@ -15,8 +15,11 @@ public class DBTable {
     @Column(name = "Z01_TABLE_NAME")
     private String z01TableName;
 
-    @Column(name = "Z01_REFERENCE_NAME")
+    @Column(name = "Z01_REFFERENCE_NAME")
     private String z01ReferenceName;
+
+    @Column(name = "Z01_VIEW_NAME")
+    private String z01ViewName;
 
     public Integer getZ01Id() {
         return z01Id;
@@ -40,5 +43,13 @@ public class DBTable {
 
     public void setZ01ReferenceName(String z01ReferenceName) {
         this.z01ReferenceName = z01ReferenceName;
+    }
+
+    public String getZ01ViewName() {
+        return z01ViewName;
+    }
+
+    public void setZ01ViewName(String z01ViewName) {
+        this.z01ViewName = z01ViewName;
     }
 }

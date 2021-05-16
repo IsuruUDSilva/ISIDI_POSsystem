@@ -4,11 +4,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="269.0" prefWidth="272.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="269.0" prefWidth="272.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
    <children>
     <Button fx:id="productBtn" layoutX="29.0" layoutY="98.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="216.0" text="Product" textFill="#bf4b4b" />
     <Button fx:id="salesBtn" layoutX="29.0" layoutY="209.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="216.0" text="Sales" textFill="#4e1c67" />
-    <Button fx:id="userBtn" layoutX="29.0" layoutY="171.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="216.0" text="Users" textFill="#3d6abf" />
+    <Button fx:id="userBtn" layoutX="29.0" layoutY="171.0" mnemonicParsing="false" onAction="#loadUser" prefHeight="26.0" prefWidth="216.0" text="Users" textFill="#3d6abf" />
       <Label layoutX="29.0" layoutY="17.0" prefHeight="40.0" prefWidth="95.0" text="Home" textFill="#49528a">
          <font>
             <Font size="27.0" />
