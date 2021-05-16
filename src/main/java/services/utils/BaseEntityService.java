@@ -41,7 +41,7 @@ public class BaseEntityService implements BaseEntityServiceI {
     }
 
     @Override
-    public List executeQuery(String sqlQuery, Map<String, String> queryParams) {
+    public List executeQuery(String sqlQuery, Map<String, Object> queryParams) {
         try {
             setUp();
             Session session = sessionFactory.openSession();
@@ -58,7 +58,7 @@ public class BaseEntityService implements BaseEntityServiceI {
     }
 
     @Override
-    public Query createQuery(Session session, String sqlQuery, Map<String, String> queryParams) {
+    public Query createQuery(Session session, String sqlQuery, Map<String, Object> queryParams) {
         try {
             Query query = session.createQuery(sqlQuery);
             if (!queryParams.isEmpty()) {

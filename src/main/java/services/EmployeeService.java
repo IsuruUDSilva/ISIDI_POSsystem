@@ -27,7 +27,7 @@ public class EmployeeService extends BaseEntityService implements EmployeeServic
     public Employee getEmployeeByUserName(String userName) {
         try {
             String sql = Const.EMPLOYEE_SELECT_ALL_QUERY_WITH_WHERE + "m01UserName = :userName";
-            Map<String, String> queryParams = new HashMap<String, String>();
+            Map<String, Object> queryParams = new HashMap<String, Object>();
             queryParams.put("userName", userName);
             List<Employee> employees = executeQuery(sql, queryParams);
             if (employees.size() < 1) {
@@ -46,7 +46,7 @@ public class EmployeeService extends BaseEntityService implements EmployeeServic
     public Employee getActiveEmployeeByUserName(String userName) {
         try {
             String sql = Const.ACTIVE_EMPLOYEE_SELECT + Const.AND + "m01UserName = :userName";
-            Map<String, String> queryParams = new HashMap<String, String>();
+            Map<String, Object> queryParams = new HashMap<String, Object>();
             queryParams.put("userName", userName);
             List<Employee> employees = executeQuery(sql, queryParams);
             if (employees.size() < 1) {

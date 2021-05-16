@@ -15,7 +15,7 @@ public class DBTable {
     @Column(name = "Z01_TABLE_NAME")
     private String z01TableName;
 
-    @Column(name = "Z01_REFERENCE_NAME")
+    @Column(name = "Z01_REFFERENCE_NAME")
     private String z01ReferenceName;
 
     @Column(name = "Z01_VIEW_NAME")
