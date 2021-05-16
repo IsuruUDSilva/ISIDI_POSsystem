@@ -1,11 +1,15 @@
 package controllers;
 
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-public class BaseController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class BaseController implements Initializable {
 
     public void popup(String title, String headerText, String status) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -30,5 +34,10 @@ public class BaseController {
         primaryStage.setResizable(isResizable);
         primaryStage.show();
         return primaryStage;
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
     }
 }

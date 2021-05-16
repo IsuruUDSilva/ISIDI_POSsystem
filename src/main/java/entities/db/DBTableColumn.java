@@ -24,6 +24,17 @@ public class DBTableColumn implements Serializable {
     @Column(name = "Z02_COLUMN_LENGTH")
     private int z02Length;
 
+    @Column(name = "Z02_SEQUENCE")
+    private int z02Sequence;
+
+    public int getZ02Sequence() {
+        return z02Sequence;
+    }
+
+    public void setZ02Sequence(int z02Sequence) {
+        this.z02Sequence = z02Sequence;
+    }
+
     public int getZ02IdZ01() {
         return z02IdZ01;
     }

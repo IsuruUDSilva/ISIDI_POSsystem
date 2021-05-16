@@ -10,7 +10,7 @@ import java.util.Map;
 public interface BaseEntityServiceI {
     public SessionFactory setUp();
     public void exit();
-    public List executeQuery(String sqlQuery, Map<String, String> queryParams);
-    public Query createQuery(Session session, String sqlQuery, Map<String, String> queryParams);
+    public List executeQuery(String sqlQuery, Map<String, Object> queryParams);
+    public Query createQuery(Session session, String sqlQuery, Map<String, Object> queryParams);
     public boolean add(Object entity);
 }
