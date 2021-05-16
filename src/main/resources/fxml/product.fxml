@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProductController">
+<AnchorPane maxHeight="768.0" maxWidth="1366.0" minHeight="768.0" minWidth="1366.0" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProductController">
    <children>
-      <Label layoutX="40.0" layoutY="14.0" prefHeight="43.0" prefWidth="139.0" text="Product" textFill="#a41d6e">
-         <font>
-            <Font name="System Bold" size="29.0" />
-         </font></Label>
-      <Button layoutX="403.0" layoutY="71.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="50.0" text="Add" />
-      <Button layoutX="527.0" layoutY="71.0" mnemonicParsing="false" text="Delete" />
-      <Button layoutX="463.0" layoutY="71.0" mnemonicParsing="false" text="Update" />
-      <ChoiceBox layoutX="197.0" layoutY="71.0" prefHeight="25.0" prefWidth="139.0" />
-      <ChoiceBox layoutX="40.0" layoutY="71.0" prefHeight="25.0" prefWidth="139.0" />
-      <TableView layoutX="40.0" layoutY="112.0" prefHeight="237.0" prefWidth="529.0">
+      <HBox layoutX="28.0" prefHeight="62.0" prefWidth="1318.0" spacing="10.0" AnchorPane.bottomAnchor="686.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <Label prefHeight="27.0" prefWidth="287.0" text="Product" textFill="#a41d6e">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField prefHeight="26.0" prefWidth="178.0" />
+            <Button mnemonicParsing="false" text="Search" />
+         </children>
+      </HBox>
+      <TableView layoutX="46.0" layoutY="181.0" prefHeight="538.0" prefWidth="1326.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="159.60000000000002">
         <columns>
           <TableColumn prefWidth="95.0" text="Code" />
           <TableColumn prefWidth="138.0" text="Name" />
@@ -23,10 +29,41 @@
             <TableColumn prefWidth="202.0" text="Qty" />
         </columns>
       </TableView>
-      <Label layoutX="54.0" layoutY="72.0" prefHeight="18.0" prefWidth="71.0" text="Category" />
-      <Label layoutX="206.0" layoutY="72.0" prefHeight="18.0" prefWidth="81.0" text="Sub category" />
-      <TextField layoutX="397.0" layoutY="23.0" prefHeight="26.0" prefWidth="178.0" />
-      <Label layoutX="358.0" layoutY="22.0" prefHeight="26.0" prefWidth="37.0" text="Search" />
-      <Button layoutX="535.0" layoutY="360.0" mnemonicParsing="false" text="Exit" />
+      <Button layoutX="535.0" layoutY="360.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="82.0" text="Exit" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="1273.6" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="714.8" />
+      <HBox alignment="CENTER_LEFT" layoutX="36.0" layoutY="72.0" prefHeight="75.0" prefWidth="1326.0" spacing="30.0" AnchorPane.bottomAnchor="621.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="72.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="255.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="60.0" text="Category" />
+                  <ChoiceBox prefHeight="25.0" prefWidth="139.0" />
+               </children>
+               <HBox.margin>
+                  <Insets bottom="10.0" />
+               </HBox.margin>
+            </HBox>
+               <HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="264.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="81.0" text="Sub category" />
+                  <ChoiceBox prefHeight="25.0" prefWidth="139.0" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="50.0" text="Add" />
+                  <Button mnemonicParsing="false" text="Update" />
+                  <Button mnemonicParsing="false" text="Delete" />
+               </children>
+               <HBox.margin>
+                  <Insets bottom="10.0" />
+               </HBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
    </children>
 </AnchorPane>
