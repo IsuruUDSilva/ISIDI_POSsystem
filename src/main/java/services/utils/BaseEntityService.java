@@ -61,8 +61,10 @@ public class BaseEntityService implements BaseEntityServiceI {
     public Query createQuery(Session session, String sqlQuery, Map<String, Object> queryParams) {
         try {
             Query query = session.createQuery(sqlQuery);
-            if (!queryParams.isEmpty()) {
-                queryParams.entrySet().stream().forEach(entry -> query.setParameter(entry.getKey(), entry.getValue()));
+            if (!(queryParams ==null)) {
+                if (!queryParams.isEmpty()) {
+                    queryParams.entrySet().stream().forEach(entry -> query.setParameter(entry.getKey(), entry.getValue()));
+                }
             }
             return query;
         } catch (Exception ex) {
