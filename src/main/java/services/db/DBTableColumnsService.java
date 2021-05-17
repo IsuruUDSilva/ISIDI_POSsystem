@@ -3,6 +3,7 @@ package services.db;
 import entities.db.DBTable;
 import entities.db.DBTableColumn;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.cell.PropertyValueFactory;
 import services.utils.BaseEntityService;
 import utility.Const;
 
@@ -40,10 +41,18 @@ public class DBTableColumnsService extends BaseEntityService implements DBTableC
         List<TableColumn> tableColumns = new ArrayList<TableColumn>();
         for (DBTableColumn z02Column : z02Columns
         ) {
-            TableColumn tableColumn = new TableColumn(z02Column.getZ02ColumnDisplayName());
+            TableColumn tableColumn = setDataForTableColumn(z02Column);
             tableColumn.setPrefWidth(z02Column.getZ02Length());
+
             tableColumns.add(tableColumn);
         }
         return tableColumns;
+    }
+
+    private TableColumn setDataForTableColumn(DBTableColumn z02Column) {
+        TableColumn column = new TableColumn(z02Column.getZ02ColumnDisplayName());
+        column.setPrefWidth(z02Column.getZ02Length());
+        column.setCellValueFactory(new PropertyValueFactory<>(z02Column.getZ02ColumnName()));
+        return column;
     }
 }

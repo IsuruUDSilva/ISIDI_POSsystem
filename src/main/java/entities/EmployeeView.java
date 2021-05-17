@@ -4,6 +4,7 @@ import org.hibernate.annotations.Immutable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
@@ -11,6 +12,7 @@ import javax.persistence.Table;
 @Table(name = "vw_m01_employee")
 public class EmployeeView {
 
+    @Id
     @Column(name = "M01_ID")
     private Integer m01Id;
 

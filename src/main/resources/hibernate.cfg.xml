@@ -14,9 +14,11 @@
         <!-- Table Entities -->
         <mapping class="entities.db.DBTable"></mapping>
         <mapping class="entities.db.DBTableColumn"></mapping>
+
         <!--Entities-->
         <mapping class="entities.Employee"/>
         <mapping class="entities.ProductType"/>
+        <mapping class="entities.EmployeeView"/>
 
     </session-factory>
 </hibernate-configuration>

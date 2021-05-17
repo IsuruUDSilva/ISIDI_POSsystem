@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 16, 2021 at 03:52 PM
+-- Generation Time: May 17, 2021 at 11:58 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.5
 
@@ -32,23 +32,24 @@ CREATE TABLE `z02_columns` (
   `Z02_COLUMN_NAME` varchar(200) NOT NULL,
   `Z02_COLUMN_DISPLAY_NAME` varchar(200) NOT NULL,
   `Z02_COLUMN_LENGTH` int(11) NOT NULL,
-  `Z02_SEQUENCE` int(11) NOT NULL
+  `Z02_SEQUENCE` int(11) NOT NULL,
+  `Z02_TYPE` int(11) NOT NULL COMMENT '0 - int, 1 - string, 2- date'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `z02_columns`
 --
 
-INSERT INTO `z02_columns` (`Z02_ID_Z01`, `Z02_COLUMN_NAME`, `Z02_COLUMN_DISPLAY_NAME`, `Z02_COLUMN_LENGTH`, `Z02_SEQUENCE`) VALUES
-(1, 'is_active', 'Active', 100, 2),
-(1, 'M01_ADDRESS', 'Address', 250, 8),
-(1, 'M01_FIRST_NAME', 'First Name', 200, 5),
-(1, 'M01_ID', 'ID', 50, 1),
-(1, 'M01_LAST_NAME', 'Last Name', 200, 6),
-(1, 'M01_NIC', 'NIC N0.', 100, 9),
-(1, 'M01_PHONE', 'Tel.', 100, 7),
-(1, 'M01_USER_NAME', 'User Name', 150, 4),
-(1, 'M02_NAME', 'Type', 150, 3);
+INSERT INTO `z02_columns` (`Z02_ID_Z01`, `Z02_COLUMN_NAME`, `Z02_COLUMN_DISPLAY_NAME`, `Z02_COLUMN_LENGTH`, `Z02_SEQUENCE`, `Z02_TYPE`) VALUES
+(1, 'isActive', 'Active', 100, 2, 1),
+(1, 'm01Address', 'Address', 250, 8, 1),
+(1, 'm01FirstName', 'First Name', 200, 5, 1),
+(1, 'm01Id', 'ID', 50, 1, 0),
+(1, 'm01LastName', 'Last Name', 200, 6, 1),
+(1, 'm01Nic', 'NIC N0.', 100, 9, 1),
+(1, 'm01Phone', 'Tel.', 100, 7, 1),
+(1, 'm01UserName', 'User Name', 150, 4, 1),
+(1, 'm02Name', 'Type', 150, 3, 1);
 
 --
 -- Indexes for dumped tables
