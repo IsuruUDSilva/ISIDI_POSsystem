@@ -1,6 +1,7 @@
 package services;
 
 import entities.Employee;
+import entities.EmployeeView;
 import services.utils.BaseEntityService;
 import utility.Const;
 
@@ -11,9 +12,9 @@ import java.util.Map;
 public class EmployeeService extends BaseEntityService implements EmployeeServiceI {
 
     @Override
-    public List<Employee> getAllEmployees() {
+    public List<EmployeeView> getAllEmployees() {
         try {
-            List<Employee> employees = executeQuery(Const.EMPLOYEE_SELECT_ALL_QUERY, null);
+            List<EmployeeView> employees = executeQuery(Const.EMPLOYEE_VW_SELECT_ALL_QUERY, null);
             return employees;
         } catch (Exception ex) {
             return null;

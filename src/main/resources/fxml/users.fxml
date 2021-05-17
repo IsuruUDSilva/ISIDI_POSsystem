@@ -9,7 +9,7 @@
    <children>
       <BorderPane maxHeight="768.0" maxWidth="1366.0" minHeight="768.0" minWidth="1366.0" prefHeight="768.0" prefWidth="1366.0">
          <center>
-            <TableView fx:id="userTable" prefHeight="500" prefWidth="800" BorderPane.alignment="CENTER">
+            <TableView fx:id="userTable" onMouseClicked="#getSelectedRow" prefHeight="500" prefWidth="800">
                <BorderPane.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </BorderPane.margin>
