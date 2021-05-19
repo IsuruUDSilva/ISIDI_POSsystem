@@ -4,16 +4,46 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="269.0" prefWidth="272.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
+<AnchorPane prefHeight="415.0" prefWidth="342.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
    <children>
-    <Button fx:id="productBtn" layoutX="29.0" layoutY="98.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="216.0" text="Product" textFill="#bf4b4b" />
-    <Button fx:id="salesBtn" layoutX="29.0" layoutY="209.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="216.0" text="Sales" textFill="#4e1c67" />
-    <Button fx:id="userBtn" layoutX="29.0" layoutY="171.0" mnemonicParsing="false" onAction="#loadUser" prefHeight="26.0" prefWidth="216.0" text="Users" textFill="#3d6abf" />
-      <Label layoutX="29.0" layoutY="17.0" prefHeight="40.0" prefWidth="95.0" text="Home" textFill="#49528a">
-         <font>
-            <Font size="27.0" />
-         </font></Label>
-      <Button fx:id="orderBtn" layoutX="29.0" layoutY="135.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="216.0" text="Order" textFill="#25a28f" />
-      <Button fx:id="logoutBtn" layoutX="191.0" layoutY="25.0" mnemonicParsing="false" text="Logout" />
+      <HBox prefHeight="69.0" prefWidth="302.0" spacing="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <Label prefHeight="40.0" prefWidth="220.0" text="Home" textFill="#49528a">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Button fx:id="logoutBtn" mnemonicParsing="false" text="Logout">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" layoutY="89.0" prefHeight="286.0" prefWidth="262.0" spacing="20.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="90.0">
+         <children>
+          <Button fx:id="productBtn" mnemonicParsing="false" prefHeight="35.0" prefWidth="210.0" text="Product" textFill="#bf4b4b">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+            <Button fx:id="orderBtn" mnemonicParsing="false" prefHeight="35.0" prefWidth="210.0" text="Order" textFill="#25a28f">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+          <Button fx:id="userBtn" mnemonicParsing="false" onAction="#loadUser" prefHeight="35.0" prefWidth="210.0" text="Users" textFill="#3d6abf">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+          <Button fx:id="salesBtn" mnemonicParsing="false" prefHeight="35.0" prefWidth="210.0" text="Sales" textFill="#4e1c67">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="210.0" text="Bill">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
