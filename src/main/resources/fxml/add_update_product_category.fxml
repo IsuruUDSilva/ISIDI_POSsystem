@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="768.0" maxWidth="1366.0" minHeight="768.0" minWidth="1366.0" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.AddUpdateProductCategory">
+   <children>
+      <VBox layoutY="46.0" prefHeight="331.0" prefWidth="391.0" spacing="20.0" AnchorPane.bottomAnchor="397.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="925.6" AnchorPane.topAnchor="40.0">
+         <children>
+            <Label prefHeight="35.0" prefWidth="378.0" text="Add/Update Product Category" textFill="#923333">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label prefHeight="38.0" prefWidth="229.0" text="Main Category">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="190.0" text="Select Main Category">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ChoiceBox prefHeight="30.0" prefWidth="178.0" />
+            <TextField prefHeight="42.0" prefWidth="343.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="138.0" text="Add" />
+                  <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="123.0" text="Update" />
+                  <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="121.0" text="Delete" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="30.0" layoutY="357.0" prefHeight="410.0" prefWidth="410.0" spacing="20.0" AnchorPane.bottomAnchor="0.6000000000000227" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="925.6" AnchorPane.topAnchor="357.0">
+         <children>
+            <Label prefHeight="42.0" prefWidth="295.0" text="Sub Category" textFill="#161515">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label prefHeight="30.0" prefWidth="158.0" text="Select Sub Category">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ChoiceBox prefHeight="30.0" prefWidth="178.0" />
+            <Label prefHeight="30.0" prefWidth="158.0" text="Select Main Category">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ChoiceBox prefHeight="29.0" prefWidth="204.0" />
+            <TextField prefHeight="35.0" prefWidth="316.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="150.0" text="Update" />
+                  <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="138.0" text="Add" />
+                  <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="123.0" text="Delete" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox layoutX="545.0" layoutY="451.0" prefHeight="100.0" prefWidth="307.0" spacing="20.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="1018.8" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="628.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="101.0" text="Previous">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="101.0" text="Apply">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="101.0" text="Exit">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

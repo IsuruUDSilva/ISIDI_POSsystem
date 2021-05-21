@@ -18,7 +18,7 @@
          <top>
             <HBox fillHeight="false" prefHeight="60.0" prefWidth="1143.0" spacing="20.0" BorderPane.alignment="CENTER_RIGHT">
                <children>
-                  <Label prefHeight="43.0" prefWidth="174.0" text="Users" textFill="#247384">
+                  <Label prefHeight="40.0" prefWidth="129.0" text="Users" textFill="#247384">
                      <font>
                         <Font name="System Bold" size="28.0" />
                      </font>
@@ -26,8 +26,16 @@
                         <Insets right="500.0" />
                      </HBox.margin>
                   </Label>
-                  <Label prefHeight="26.0" prefWidth="50.0" text="Search" />
-                  <TextField prefHeight="26.0" prefWidth="159.0" />
+                  <HBox prefHeight="40.0" prefWidth="309.0" spacing="5.0">
+                     <children>
+                        <TextField prefHeight="26.0" prefWidth="167.0" />
+                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="67.0" text="Search">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
                   <Button fx:id="addBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Add" />
                   <Button fx:id="updateBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Update" />
                   <Button fx:id="deleteBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Delete" />
