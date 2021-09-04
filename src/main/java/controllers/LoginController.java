@@ -2,6 +2,7 @@ package controllers;
 
 import entities.Employee;
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
@@ -10,22 +11,14 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import services.EmployeeService;
 import services.EmployeeServiceI;
+
 import java.io.IOException;
 
 
 public class LoginController extends BaseController {
 
-    private Employee employee;
-
-    public Employee getEmployee() {
-        return employee;
-    }
-
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
-    }
-
     private final EmployeeServiceI employeeServiceI = new EmployeeService();
+    private Employee employee;
     @FXML
     private Button loginBtn;
     @FXML
@@ -35,12 +28,21 @@ public class LoginController extends BaseController {
     @FXML
     private PasswordField passWordPassWordField;
 
-    public void login() {
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
+
+    public void login(ActionEvent event) {
         String userName = userNameTextField.getText();
         String passWord = passWordPassWordField.getText();
 
         if (validateUser(userName, passWord)) {
             popup("Access Granted", "You now login ", status());
+            hide(event);
             loadHome();
         } else {
             popup("Access Denied", "Check your User Name and Password");
@@ -58,6 +60,9 @@ public class LoginController extends BaseController {
                 if (getEmployee().equals(null)) {
                     return false;
                 } else {
+                    if (getEmployee().getM01Password().equals(passWord)) {
+                        setActiveUser(getEmployee());
+                    }
                     return getEmployee().getM01Password().equals(passWord);
                 }
             }
@@ -76,6 +81,7 @@ public class LoginController extends BaseController {
             Pane root = fxmlLoader.load(getClass().getResource("/fxml/home.fxml").openStream());
 //            HomeController homeController = fxmlLoader.getController();
             showNextStage(root, false);
+            System.out.println(getActiveUser());
         } catch (IOException e) {
             e.printStackTrace();
         }

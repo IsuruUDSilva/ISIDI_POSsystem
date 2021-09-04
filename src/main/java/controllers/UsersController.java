@@ -1,5 +1,6 @@
 package controllers;
 
+import entities.Employee;
 import entities.EmployeeView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -54,6 +55,7 @@ public class UsersController extends BaseController {
     }
 
     public void getUserData() {
+       Employee activeEmployee = getActiveUser();
         List<EmployeeView> employees = employeeServiceI.getAllEmployees();
         ObservableList<EmployeeView> data = FXCollections.observableList(employees);
         userTable.setItems(data);

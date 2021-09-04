@@ -1,6 +1,9 @@
 package controllers;
 
+import entities.Employee;
+import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.layout.Pane;
@@ -10,6 +13,15 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class BaseController implements Initializable {
+    private static  Employee activeUser;
+
+    public Employee getActiveUser() {
+        return activeUser;
+    }
+
+    public void setActiveUser(Employee activeUser) {
+        this.activeUser = activeUser;
+    }
 
     public void popup(String title, String headerText, String status) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -34,6 +46,10 @@ public class BaseController implements Initializable {
         primaryStage.setResizable(isResizable);
         primaryStage.show();
         return primaryStage;
+    }
+
+    public void hide(ActionEvent event) {
+        ((Node) event.getSource()).getScene().getWindow().hide();
     }
 
     @Override
