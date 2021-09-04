@@ -4,17 +4,24 @@ import entities.Employee;
 import entities.EmployeeView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 import services.EmployeeService;
 import services.EmployeeServiceI;
 import services.db.DBTableColumnsService;
 import services.db.DBTableColumnsServiceI;
 import utility.Const;
+import utility.DialogMode;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -55,7 +62,7 @@ public class UsersController extends BaseController {
     }
 
     public void getUserData() {
-       Employee activeEmployee = getActiveUser();
+        Employee activeEmployee = getActiveUser();
         List<EmployeeView> employees = employeeServiceI.getAllEmployees();
         ObservableList<EmployeeView> data = FXCollections.observableList(employees);
         userTable.setItems(data);
@@ -82,5 +89,31 @@ public class UsersController extends BaseController {
             EmployeeView employeeView = userTable.getSelectionModel().getSelectedItem();
             setSelectedEmployee(employeeView.getM01Id());
         }
+    }
+
+    public void addUser(ActionEvent event) {
+        openAddUpdateView(DialogMode.ADD, event);
+    }
+
+    public void openAddUpdateView(DialogMode mode, ActionEvent event) {
+
+        if(mode == DialogMode.UPDATE && this.getSelectedEmployee() == null){
+            return;
+        }
+
+        try {
+            Stage currentStage = new Stage(); //use getCurrentStage() if you want to display the scene in currently opened stage instead of creating a new window
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(getClass().getResource("/fxml/add_update_users.fxml"));
+            Pane root = fxmlLoader.load();
+            Scene scene = new Scene(root);
+            AddUpdateUsersController controller = fxmlLoader.getController();
+            controller.initData(mode,this.getSelectedEmployee());
+            currentStage.setScene(scene);
+            currentStage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 }

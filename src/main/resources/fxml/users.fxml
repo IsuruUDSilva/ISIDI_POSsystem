@@ -36,7 +36,7 @@
                         </Button>
                      </children>
                   </HBox>
-                  <Button fx:id="addBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Add" />
+                  <Button fx:id="addBtn" mnemonicParsing="false" onAction="#addUser" prefHeight="25.0" prefWidth="88.0" text="Add" />
                   <Button fx:id="updateBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Update" />
                   <Button fx:id="deleteBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Delete" />
                   <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="94.0" text="Exit" />
