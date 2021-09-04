@@ -86,12 +86,7 @@
       </HBox>
       <HBox alignment="CENTER" layoutX="1036.0" prefHeight="100.0" prefWidth="280.0" spacing="30.0" AnchorPane.bottomAnchor="648.0" AnchorPane.leftAnchor="1036.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="20.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="106.0" text="Add">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Button>
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="94.0" text="Update">
+            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="103.0" text="Update">
                <font>
                   <Font size="15.0" />
                </font>

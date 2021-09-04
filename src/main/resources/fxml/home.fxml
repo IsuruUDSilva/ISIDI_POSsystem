@@ -21,7 +21,7 @@
       </HBox>
       <VBox alignment="CENTER" layoutY="89.0" prefHeight="286.0" prefWidth="262.0" spacing="20.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="90.0">
          <children>
-          <Button fx:id="productBtn" mnemonicParsing="false" prefHeight="35.0" prefWidth="210.0" text="Product" textFill="#bf4b4b">
+          <Button fx:id="productBtn" mnemonicParsing="false" onAction="#loadProduct" prefHeight="35.0" prefWidth="210.0" text="Product" textFill="#bf4b4b">
                <font>
                   <Font size="15.0" />
                </font></Button>
@@ -33,7 +33,7 @@
                <font>
                   <Font size="15.0" />
                </font></Button>
-          <Button fx:id="salesBtn" mnemonicParsing="false" prefHeight="35.0" prefWidth="210.0" text="Sales" textFill="#4e1c67">
+          <Button fx:id="salesBtn" mnemonicParsing="false" onAction="#loadSales" prefHeight="35.0" prefWidth="210.0" text="Sales" textFill="#4e1c67">
                <font>
                   <Font size="15.0" />
                </font>
