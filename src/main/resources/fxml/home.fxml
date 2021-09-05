@@ -25,7 +25,7 @@
                <font>
                   <Font size="15.0" />
                </font></Button>
-            <Button fx:id="orderBtn" mnemonicParsing="false" prefHeight="35.0" prefWidth="210.0" text="Order" textFill="#25a28f">
+            <Button fx:id="orderBtn" mnemonicParsing="false" onAction="#loadOrder" prefHeight="35.0" prefWidth="210.0" text="Order" textFill="#25a28f">
                <font>
                   <Font size="15.0" />
                </font></Button>
@@ -34,11 +34,6 @@
                   <Font size="15.0" />
                </font></Button>
           <Button fx:id="salesBtn" mnemonicParsing="false" onAction="#loadSales" prefHeight="35.0" prefWidth="210.0" text="Sales" textFill="#4e1c67">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Button>
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="210.0" text="Bill">
                <font>
                   <Font size="15.0" />
                </font>
