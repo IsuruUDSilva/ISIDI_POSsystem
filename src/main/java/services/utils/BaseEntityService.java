@@ -61,7 +61,7 @@ public class BaseEntityService implements BaseEntityServiceI {
     public Query createQuery(Session session, String sqlQuery, Map<String, Object> queryParams) {
         try {
             Query query = session.createQuery(sqlQuery);
-            if (!(queryParams ==null)) {
+            if (!(queryParams == null)) {
                 if (!queryParams.isEmpty()) {
                     queryParams.entrySet().stream().forEach(entry -> query.setParameter(entry.getKey(), entry.getValue()));
                 }
@@ -69,6 +69,21 @@ public class BaseEntityService implements BaseEntityServiceI {
             return query;
         } catch (Exception ex) {
             return null;
+        }
+    }
+
+    @Override
+    public Object getById(Integer id,Object entityClass) {
+        try {
+            setUp();
+            Session session = sessionFactory.openSession();
+            Object entity = session.get(entityClass.getClass(),id);
+            return entity;
+        } catch (Exception ex) {
+            System.out.println(ex);
+            return null;
+        } finally {
+            exit();
         }
     }
 

@@ -60,6 +60,12 @@ public class EmployeeService extends BaseEntityService implements EmployeeServic
     }
 
     @Override
+    public Employee getEmployeeById(Integer id) {
+        Employee employee = (Employee) getById(id, new Employee());
+        return employee;
+    }
+
+    @Override
     public boolean addEmployee(Employee employee) {
         try {
             return add(employee);

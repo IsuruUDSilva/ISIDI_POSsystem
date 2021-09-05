@@ -21,7 +21,6 @@ import services.db.DBTableColumnsServiceI;
 import utility.Const;
 import utility.DialogMode;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -95,20 +94,25 @@ public class UsersController extends BaseController {
         openAddUpdateView(DialogMode.ADD, event);
     }
 
+    public void updateEmployee(ActionEvent event) {
+        openAddUpdateView(DialogMode.UPDATE,event);
+    }
+
     public void openAddUpdateView(DialogMode mode, ActionEvent event) {
 
-        if(mode == DialogMode.UPDATE && this.getSelectedEmployee() == null){
+        if (mode == DialogMode.UPDATE && this.getSelectedEmployee() == null) {
+            popup("Unable to Update","Please Select an Employee");
             return;
         }
 
         try {
             Stage currentStage = new Stage(); //use getCurrentStage() if you want to display the scene in currently opened stage instead of creating a new window
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("/fxml/add_update_users.fxml"));
+            fxmlLoader.setLocation(getClass().getResource("/fxml/addUpdateUsers.fxml"));
             Pane root = fxmlLoader.load();
             Scene scene = new Scene(root);
             AddUpdateUsersController controller = fxmlLoader.getController();
-            controller.initData(mode,this.getSelectedEmployee());
+            controller.initData(mode, this.getSelectedEmployee());
             currentStage.setScene(scene);
             currentStage.show();
         } catch (Exception e) {
@@ -116,4 +120,6 @@ public class UsersController extends BaseController {
         }
 
     }
+
+
 }

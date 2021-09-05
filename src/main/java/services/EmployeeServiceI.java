@@ -15,6 +15,8 @@ public interface EmployeeServiceI {
 
     boolean addEmployee(Employee employee);
 
+    Employee getEmployeeById(Integer id);
+
 
 
 }
