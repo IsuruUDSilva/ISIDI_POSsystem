@@ -13,4 +13,5 @@ public interface BaseEntityServiceI {
     public List executeQuery(String sqlQuery, Map<String, Object> queryParams);
     public Query createQuery(Session session, String sqlQuery, Map<String, Object> queryParams);
     public boolean add(Object entity);
+    public Object getById(Integer id,Object entityClass);
 }
