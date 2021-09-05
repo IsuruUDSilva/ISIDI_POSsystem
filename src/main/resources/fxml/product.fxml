@@ -54,7 +54,7 @@
                      <children>
                         <Button mnemonicParsing="false" onAction="#loadAddUpdateProduct" prefHeight="26.0" prefWidth="50.0" text="Add" />
                         <Button mnemonicParsing="false" onAction="#loadAddUpdateProduct" text="Update" />
-                        <Button mnemonicParsing="false" text="Delete" />
+                        <Button mnemonicParsing="false" onAction="#deleteProduct" text="Delete" />
                      </children>
                      <HBox.margin>
                         <Insets bottom="10.0" />
@@ -63,16 +63,23 @@
                </children>
             </HBox>
          </top>
-         <bottom>
-            <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="82.0" text="Exit" BorderPane.alignment="CENTER" />
-         </bottom>
          <left>
-            <HBox alignment="CENTER_LEFT" prefHeight="622.0" prefWidth="1195.0" spacing="30.0" BorderPane.alignment="CENTER">
+            <HBox alignment="CENTER_LEFT" prefHeight="670.0" prefWidth="1310.0" spacing="30.0" BorderPane.alignment="BOTTOM_RIGHT">
                <padding>
                   <Insets left="20.0" />
                </padding>
                <children>
-                  <TableView editable="true" fixedCellSize="1.0" prefHeight="622.0" prefWidth="1244.0" />
+                  <TableView editable="true" fixedCellSize="1.0" prefHeight="618.0" prefWidth="1138.0" />
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="666.0" prefWidth="123.0">
+                     <children>
+                        <Button alignment="CENTER" contentDisplay="TOP" lineSpacing="1.0" mnemonicParsing="false" onAction="#loadAddUpdateCategory" prefHeight="91.0" prefWidth="108.0" text="Add/Update Product Category" textAlignment="CENTER" wrapText="true">
+                           <VBox.margin>
+                              <Insets bottom="550.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#loadExit" prefHeight="43.0" prefWidth="119.0" text="Exit" />
+                     </children>
+                  </VBox>
                </children>
             </HBox>
          </left>

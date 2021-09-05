@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="768.0" maxWidth="1366.0" minHeight="768.0" minWidth="1366.0" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddUpdateProductController">
+<AnchorPane maxHeight="768.0" maxWidth="1366.0" minHeight="594.0" minWidth="1107.0" prefHeight="594.0" prefWidth="1107.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddUpdateProductController">
    <children>
-      <VBox layoutX="936.0" layoutY="161.0" prefHeight="555.0" prefWidth="388.0" spacing="30.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="936.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="161.0">
+      <VBox layoutX="763.0" layoutY="22.0" prefHeight="457.0" prefWidth="280.0" spacing="30.0" AnchorPane.bottomAnchor="115.0" AnchorPane.leftAnchor="763.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="22.0">
          <children>
             <Label prefHeight="22.0" prefWidth="190.0" text="Remaining Quantity">
                <font>
@@ -20,22 +20,18 @@
                <font>
                   <Font size="15.0" />
                </font></Label>
-            <ImageView fitHeight="287.0" fitWidth="237.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="281.0" fitWidth="218.0" pickOnBounds="true" preserveRatio="true">
                <effect>
                   <Glow />
                </effect>
             </ImageView>
-            <HBox alignment="CENTER" prefHeight="41.0" prefWidth="368.0" spacing="10.0">
+            <HBox alignment="CENTER" prefHeight="91.0" prefWidth="368.0" spacing="10.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="78.0" text="Exit">
+                  <Button mnemonicParsing="false" onAction="#loadExit" prefHeight="31.0" prefWidth="62.0" text="Exit">
                      <font>
                         <Font size="15.0" />
                      </font></Button>
-                  <Button lineSpacing="10.0" mnemonicParsing="false" text="Previous">
-                     <font>
-                        <Font size="15.0" />
-                     </font></Button>
-                  <Button lineSpacing="20.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="70.0" text="Apply">
+                  <Button lineSpacing="20.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="61.0" text="Apply">
                      <font>
                         <Font size="15.0" />
                      </font></Button>
@@ -64,7 +60,7 @@
             <Insets bottom="30.0" />
          </padding>
       </HBox>
-      <VBox layoutX="10.0" layoutY="22.0" prefHeight="708.0" prefWidth="362.0" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="40.0">
+      <VBox layoutX="10.0" layoutY="22.0" prefHeight="520.0" prefWidth="362.0" spacing="20.0" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="40.0">
          <children>
             <HBox prefHeight="90.0" prefWidth="362.0">
                <children>

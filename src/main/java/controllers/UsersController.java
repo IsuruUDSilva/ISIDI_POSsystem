@@ -120,6 +120,11 @@ public class UsersController extends BaseController {
         }
 
     }
-
-
+    public void loadExit(ActionEvent event) {
+        try {
+            hide(event);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

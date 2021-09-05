@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="768.0" maxWidth="1366.0" minHeight="768.0" minWidth="1366.0" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.Sales">
+<AnchorPane maxHeight="768.0" maxWidth="1366.0" minHeight="768.0" minWidth="1366.0" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SalesController">
    <children>
       <TableView layoutX="34.0" layoutY="92.0" prefHeight="602.0" prefWidth="967.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="368.0" AnchorPane.topAnchor="135.0" />
       <HBox prefHeight="100.0" prefWidth="200.0" spacing="30.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
@@ -50,6 +50,6 @@
             <Insets left="70.0" top="40.0" />
          </padding>
       </VBox>
-      <Button layoutX="521.0" layoutY="338.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="104.0" text="Exit" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+      <Button layoutX="521.0" layoutY="338.0" mnemonicParsing="false" onAction="#loadHome" prefHeight="49.0" prefWidth="104.0" text="Exit" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="50.0" />
    </children>
 </AnchorPane>
