@@ -3,6 +3,7 @@ package utility;
 public final class Const {
     //-----------------------------------------identifiers---------------------------------------------------
     public static final String EMPLOYEE_TABLE_IDENTIFIER = "M01";
+    public static final String EMPLOYEE_TYPE_TABLE_IDENTIFIER = "M02";
     public static final String BILL_TABLE_IDENTIFIER = "M06";
     public static final String DB_TABLE_IDENTIFIER = "Z01";
     public static final String DB_TABLE_COLUMN_IDENTIFIER = "Z02";
@@ -14,6 +15,9 @@ public final class Const {
     public static final String EMPLOYEE_SELECT_ALL_QUERY = "FROM Employee " + EMPLOYEE_TABLE_IDENTIFIER;
     public static final String EMPLOYEE_SELECT_ALL_QUERY_WITH_WHERE = EMPLOYEE_SELECT_ALL_QUERY + WHERE + EMPLOYEE_TABLE_IDENTIFIER + ".";
     public static final String ACTIVE_EMPLOYEE_SELECT = EMPLOYEE_SELECT_ALL_QUERY_WITH_WHERE + "m01Active = 1";
+
+    //Regarding EmployeeTypeEnum table -----------------
+    public static final String EMPLOYEE_TYPE_SELECT_ALL = "FROM EmployeeType " + EMPLOYEE_TYPE_TABLE_IDENTIFIER;
 
     //Regarding z0 tables
     public static final String DB_TABLE_SELECT_ALL_QUERY = "FROM DBTable " + DB_TABLE_IDENTIFIER;
@@ -32,9 +36,4 @@ public final class Const {
 
     //Regarding BillM06 table------------------------
 //    public static final String BILL_SELECT_ALL_
-    public enum employeeType {
-        Admin,
-        Manager,
-        Cashier
-    }
 }
