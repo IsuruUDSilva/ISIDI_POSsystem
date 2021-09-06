@@ -19,6 +19,8 @@
         <mapping class="entities.Employee"/>
         <mapping class="entities.ProductType"/>
         <mapping class="entities.EmployeeView"/>
+        <mapping class="entities.EmployeeType"/>
+
 
     </session-factory>
 </hibernate-configuration>
